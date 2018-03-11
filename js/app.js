@@ -90,6 +90,8 @@ Player.prototype.update=function()
 
 Player.prototype.handleInput=function(keyPress)
 {
+
+
   switch (keyPress) {
       case 'left':
           this.x -= this.speed + 55;
@@ -104,21 +106,21 @@ Player.prototype.handleInput=function(keyPress)
           this.y += this.speed + 35;
           break;
       case 'enter':
-          changePlayer();
+          player.changePlayer();
           break;
       default:
           break;
   }
 
 };
-
 // Function to change the player
 var n = 0;
-var changePlayer = function() {
+Player.prototype.changePlayer = function() {
     n = (n + 1) % player.players.length;
     player.sprite = player.players[n];
 	console.log("change P",player);
 };
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
