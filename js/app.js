@@ -116,9 +116,8 @@ Player.prototype.handleInput=function(keyPress)
 // Function to change the player
 var n = 0;
 Player.prototype.changePlayer = function() {
-    n = (n + 1) % player.players.length;
-    this.sprite = player.players[n];
-	console.log("change P",player);
+    n = (n + 1) % this.players.length;
+    this.sprite = this.players[n];
 };
 
 
