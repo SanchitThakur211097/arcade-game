@@ -117,7 +117,7 @@ Player.prototype.handleInput=function(keyPress)
 var n = 0;
 Player.prototype.changePlayer = function() {
     n = (n + 1) % player.players.length;
-    player.sprite = player.players[n];
+    this.sprite = player.players[n];
 	console.log("change P",player);
 };
 
